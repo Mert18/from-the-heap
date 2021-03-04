@@ -1,0 +1,12 @@
+
+
+.mysvg {
+    margin-top: 2rem;
+    path {
+        transition: all 3s;
+    }
+    path:hover {
+        fill: white;
+        transition: all .4s;
+    }
+}
