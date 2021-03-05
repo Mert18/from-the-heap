@@ -1,12 +1,30 @@
 
-
 .mysvg {
-    margin-top: 2rem;
+    border-radius: 2rem;
     path {
         transition: all 3s;
     }
     path:hover {
         fill: white;
         transition: all .4s;
+    }
+}
+
+.home {
+    display: flex;
+
+    &__left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__right {
+        flex: 1;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
