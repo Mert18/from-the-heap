@@ -12,7 +12,7 @@ const Home = () => {
                 <div className="home__right__title">
                     <h1>FROM THE HEAP</h1>
                 </div>
-                <div className="home__right__signup">
+                <div className="home__right__signup" >
                     <form className="form__signup" autocomplete="off" >
                         <div className="form__input">
                             <input type="text" placeholder="E-mail" autocomplete="off" />
