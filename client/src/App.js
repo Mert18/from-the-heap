@@ -9,7 +9,6 @@ import {
 import Header from './components/Header';
 import Home from './components/Home';
 import Movie from './components/Movie';
-import Series from './components/Series';
 import Song from './components/Song';
 
 const App = () => {
@@ -25,7 +24,6 @@ const App = () => {
                         <Route path="/" exact component={Home} />
                         <Route path="/song" component={Song} />
                         <Route path="/movie" component={Movie} />
-                        <Route path="/series" component={Series} />
                     </Switch>
                 </main>
             </div>
