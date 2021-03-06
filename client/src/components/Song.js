@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Songs from './Posts/Songs';
+
 const Song = () => {
 
     const [slow, setSlow] = useState(false);
@@ -18,10 +20,7 @@ const Song = () => {
                 </div>
 
                 <div className="song__left__content">
-                    <div className="music">
-                        <h2>title of the song</h2>
-                        <h3>artist</h3>
-                    </div>
+                    <Songs />
                 </div>
             </div>
 
