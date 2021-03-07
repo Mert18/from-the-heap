@@ -1,9 +1,10 @@
-@import 'base';
 @import 'variables';
+@import 'base';
 
 @import 'pages/home';
 @import 'pages/song';
 @import 'pages/movie';
+@import 'pages/login';
 
 @import 'components/header';
 @import 'components/forms';

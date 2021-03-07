@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/main.scss';
 import {
     BrowserRouter as Router,
@@ -13,15 +13,18 @@ import Header from './components/Header.js';
 import Home from './components/Home.js';
 import Movie from './components/Movie.js';
 import Song from './components/Song.js';
+import Login from './components/Login.js';
 
 const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getPosts());
-    }, [dispatch])
+    }, [dispatch]);
+
+    const [token, setToken] = useState(true);
     return (
-        <Router>
+        token ? <Router>
             <div className="container">
                 <header className="container__header">
                     <Header />
@@ -32,10 +35,11 @@ const App = () => {
                         <Route path="/" exact component={Home} />
                         <Route path="/song" component={Song} />
                         <Route path="/movie" component={Movie} />
+                        <Route path="/login" component={Login} />
                     </Switch>
                 </main>
             </div>
-        </Router>
+        </Router> : <Login />
     )
 }
 
