@@ -1,12 +1,12 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-export default (songs = [], action) => {
+export default (posts = [], action) => {
     switch (action.type) {
         case 'FETCH_ALL':
             return action.payload;
         case 'CREATE':
-            return [...songs, action.payload];
+            return [...posts, action.payload];
         default:
-            return songs;
+            return posts;
     }
 }

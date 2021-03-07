@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/main.scss';
 import {
     BrowserRouter as Router,
@@ -6,12 +6,20 @@ import {
     Route,
 } from "react-router-dom";
 
-import Header from './components/Header';
-import Home from './components/Home';
-import Movie from './components/Movie';
-import Song from './components/Song';
+import { useDispatch } from 'react-redux';
+import { getPosts } from './actions/Posts.js';
+
+import Header from './components/Header.js';
+import Home from './components/Home.js';
+import Movie from './components/Movie.js';
+import Song from './components/Song.js';
 
 const App = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getPosts());
+    }, [dispatch])
     return (
         <Router>
             <div className="container">

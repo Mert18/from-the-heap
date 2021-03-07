@@ -13,9 +13,9 @@ const Home = () => {
                     <h1>FROM THE HEAP</h1>
                 </div>
                 <div className="home__right__signup" >
-                    <form className="form__signup" autocomplete="off" >
+                    <form className="form__signup" autoComplete="off" >
                         <div className="form__input">
-                            <input type="text" placeholder="E-mail" autocomplete="off" />
+                            <input type="text" placeholder="E-mail" autoComplete="off" />
                         </div>
                         <div className="form__input">
                             <input type="text" placeholder="Username" />
@@ -30,7 +30,7 @@ const Home = () => {
                 </div>
                 <h2>or</h2>
                 <div className="home__right__signin">
-                    <form className="form__signin" autocomplete="off">
+                    <form className="form__signin" autoComplete="off">
                         <div className="form__input">
                             <input type="text" placeholder="E-mail" />
                         </div>

@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 
-const SongSchema = mongoose.Schema({
+const PostSchema = mongoose.Schema({
     title: String,
-    artist: String,
+    message: String,
     tags: [String],
     createdAt: {
         type: Date,
@@ -10,6 +10,6 @@ const SongSchema = mongoose.Schema({
     },
 });
 
-const SongMessage = mongoose.model('SongMessage', SongSchema);
+const PostMessage = mongoose.model('PostMessage', PostSchema);
 
-export default SongMessage;
+export default PostMessage;

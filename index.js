@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import songRoutes from './routes/Songs.js'
+import postRoutes from './routes/Posts.js'
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
-app.use('/songs', songRoutes)
+app.use('/posts', postRoutes)
 
 const CONNECTION_URL = process.env.MONGO_URI;
 

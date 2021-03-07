@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Songs from './Posts/Songs';
+import Posts from './Posts/Posts.js';
 
 const Song = () => {
 
@@ -20,7 +20,7 @@ const Song = () => {
                 </div>
 
                 <div className="song__left__content">
-                    <Songs />
+                    <Posts />
                 </div>
             </div>
 

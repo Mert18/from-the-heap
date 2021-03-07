@@ -1,19 +1,18 @@
 import * as api from '../api';
 
-export const getSongs = () => async (dispatch) => {
-
+export const getPosts = () => async (dispatch) => {
     try {
-        const { data } = await api.fetchSongs();
+        const { data } = await api.fetchPosts();
         dispatch({ type: 'FETCH_ALL', payload: data });
+        console.log(data)
     } catch (error) {
         console.log(error.message);
     }
 }
 
-export const createSong = (Song) => async (dispatch) => {
-
+export const createPost = (Post) => async (dispatch) => {
     try {
-        const { data } = await api.createSong(Song);
+        const { data } = await api.createPost(Post);
         dispatch({ type: 'CREATE', payload: data });
     } catch (error) {
         console.log("Error! ", error.message)
