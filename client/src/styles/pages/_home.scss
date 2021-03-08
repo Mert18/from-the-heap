@@ -5,24 +5,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &__left {
-        flex: 1;
-        height: 70vh;
+    font-size: 3em;
+    color: white;
+    margin-top: 2.5em;
+    padding: 0 4em;
+    &__title {
+        flex: 2;
     }
-    &__right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+    &__text {
+        flex: 4;
+    }
+
+    h1 {
+        transition: all .5s;
+        padding: 1rem;
+        &:hover {
+            cursor: pointer;
+            color: black;
+        }
     }
 }
 
 .rectsvg {
-    transition: all 2s;
+    transition: all 1s;
 
     rect {
-        transition: all 2s;
+        transition: all 1s;
+
+        &:hover {
+            fill: white;
+        }
     }
 }

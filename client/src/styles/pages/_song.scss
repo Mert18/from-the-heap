@@ -2,7 +2,6 @@
 .song {
     width: 100%;
     display: flex;
-
     &__left {
         display: flex;
         flex-direction: column;
@@ -29,32 +28,24 @@
                 }
             }
         }
-
         &__content {
-            width: 80%;
+            width: 90%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            .music {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                padding: 2em;
-                border-radius: 2rem;
-            }
         }
     }
-
     &__right {
         display: flex;
         flex-direction: column;
         flex:1;
+        color: $secondary-color;
         &__statistics {
-            padding: 2em;
+            padding: 4em 8em;
             text-align: center;
-            margin: 2em 0;
+            margin: 3em 0;
+            font-size: .9rem;
         }
         &__throw {
             display: flex;
@@ -66,21 +57,32 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                margin-top: 3em;
                 input {
                     text-align: center;
-                    font-size: 1.3rem;
-                    padding: 1em;
-                    width: 100%;
-                    margin-top: 1rem;
-                    height: 3em;
-                }
-
-                button {
-                    width: 7em;
-                    height: 2rem;
-                    margin: 2rem;
+                    font-size: 1.1rem;
+                    padding: 1em 2em;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: $secondary-color;
+                    &::placeholder {
+                        color: $secondary-color;
+                    }
+                    &:focus {
+                        font-weight: 600;
+                        border-bottom: 3px solid $secondary-color;
+                    }
                 }
             }
         }
     }
+}
+
+.post {
+    border-bottom: 3px solid white;
+    color: $secondary-color;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: .5rem;
 }

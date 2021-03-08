@@ -4,11 +4,17 @@
     height: 5em;
     display: flex;
     justify-content: space-around;
-
     a {
-        color: black;
+        color: white;
         text-decoration: none;
         margin-left: 3em;
+        transition: all .6s;
+        font-size: 1.3rem;
+        &:hover {
+            transition: all .6s;
+            color: $tertiary-color;
+            font-size: 1.2rem;
+        }
     }
     &__nav {
         ul {

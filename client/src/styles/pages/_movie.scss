@@ -11,6 +11,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: $secondary-color;
 
         &__throw {
             display: flex;
@@ -19,18 +20,25 @@
 
             form {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-
+                flex-direction: column;
+                margin-top: 3em;
                 input {
-                    margin: 1em;
-                    font-size: 1.3rem;
-                    padding: 1em;
-                }
-                button {
-                    height: 3em;
-                    width: 9em;
+                    text-align: center;
+                    font-size: 1.1rem;
+                    padding: 1em 2em;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: $secondary-color;
+                    &::placeholder {
+                        color: $secondary-color;
+                    }
+                    &:focus {
+                        font-weight: 600;
+                        border-bottom: 3px solid $secondary-color;
+                    }
                 }
             }
         }

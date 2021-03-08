@@ -8,7 +8,6 @@ const Movie = () => {
                 <div className="movie__left__throw">
                     <form>
                         <input type="text" placeholder="Movie Title" />
-                        <button>throw</button>
                     </form>
                 </div>
 
@@ -20,7 +19,7 @@ const Movie = () => {
             <div className="movie__right">
                 <div className="movie__right__movies">
                     <div className="film">
-                        <h1>title of the film</h1>
+                        {/* MOVIES COME HERE */}
                     </div>
                 </div>
             </div>

@@ -6,7 +6,6 @@ const Post = ({ post }) => {
     return (
         <div className="post">
             <div className="post__title">
-                {console.log(post)}
                 <h1>{post.title}</h1>
             </div>
 
