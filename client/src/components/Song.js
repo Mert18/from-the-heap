@@ -17,7 +17,19 @@ const Song = () => {
                 </div>
                 <div className="song__right__throw">
                     <form>
-                        <input type="text" placeholder="Throw the song here" />
+                        <label for="song__title">Title</label>
+                        <input type="text" id="song__title" />
+
+                        <label for="song__message">Your Message</label>
+                        <input type="text" id="song__message" />
+
+                        <label for="song__spotify">Spotify Link</label>
+                        <input type="text" id="song__spotify" />
+
+                        <label for="song__youtube">Youtube Link</label>
+                        <input type="text" id="song__youtube" />
+
+                        <button></button>
                     </form>
                 </div>
 

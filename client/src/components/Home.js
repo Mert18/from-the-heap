@@ -8,14 +8,8 @@ const Home = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setColor("black");
+            setColor(randomColor());
         }, 2000);
-        return () => clearInterval(interval);
-    }, []);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setColor("white");
-        }, 5000);
         return () => clearInterval(interval);
     }, []);
 
