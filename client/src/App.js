@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { getPosts, createPost } from './actions/Posts.js';
 import { getMovies, createMovie } from './actions/Movies.js';
 
+
 import Header from './components/Header.js';
 import Home from './components/Home.js';
 import Movie from './components/Movie.js';
@@ -19,6 +20,14 @@ import Login from './components/Login.js';
 
 const App = () => {
 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getPosts());
+        dispatch(createPost());
+        dispatch(getMovies());
+        dispatch(createMovie());
+    }, [dispatch]);
 
     const [token, setToken] = useState(true);
     return (

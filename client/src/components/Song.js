@@ -32,8 +32,8 @@ const Song = () => {
         spotify: spotify,
         youtube: youtube
     }
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
         dispatch(createPost(songObject));
     }
 

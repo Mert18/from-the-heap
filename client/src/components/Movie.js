@@ -23,8 +23,8 @@ const Movie = () => {
         message: message
     };
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
         dispatch(createMovie(MovieObject));
     }
     return (
