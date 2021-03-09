@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import Posts from './Posts/Posts.js';
 
-
-
-
 const Song = () => {
 
     const [title, setTitle] = useState("");

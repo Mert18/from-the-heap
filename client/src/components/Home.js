@@ -3,8 +3,6 @@ import randomColor from 'randomcolor'
 
 const Home = () => {
     const [color, setColor] = useState(randomColor())
-    const [colortwo, setColorTwo] = useState(randomColor())
-    const [colorthree, setColorThree] = useState(randomColor())
 
     useEffect(() => {
         const interval = setInterval(() => {

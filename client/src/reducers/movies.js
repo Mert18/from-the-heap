@@ -2,9 +2,9 @@
 
 export default (movies = [], action) => {
     switch (action.type) {
-        case 'FETCH_ALL':
+        case 'FETCH_MOVIES':
             return action.payload;
-        case 'CREATE':
+        case 'CREATE_MOVIE':
             return [...movies, action.payload];
         default:
             return movies;
