@@ -8,6 +8,7 @@ import {
 
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/Posts.js';
+import { getMovies } from './actions/Movies.js';
 
 import Header from './components/Header.js';
 import Home from './components/Home.js';
@@ -20,6 +21,7 @@ const App = () => {
 
     useEffect(() => {
         dispatch(getPosts());
+        dispatch(getMovies());
     }, [dispatch]);
 
     const [token, setToken] = useState(true);

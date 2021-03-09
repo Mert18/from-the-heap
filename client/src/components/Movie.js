@@ -1,16 +1,18 @@
 import React from 'react';
 
+import Movies from './Movies/Movies.js';
+
 const Movie = () => {
     return (
         <div className="movie">
 
             <div className="movie__left">
                 <div className="movie__left__throw">
-                    <form>
-                        <label for="movie__title">Title</label>
+                    <form autoComplete="off">
+                        <label htmlFor="movie__title">Title</label>
                         <input type="text" id="movie__title" />
 
-                        <label for="movie__message">Your Message</label>
+                        <label htmlFor="movie__message">Your Message</label>
                         <input type="text" id="movie__message" />
                         <button></button>
                     </form>
@@ -24,7 +26,7 @@ const Movie = () => {
             <div className="movie__right">
                 <div className="movie__right__movies">
                     <div className="film">
-                        {/* MOVIES COME HERE */}
+                        <Movies />
                     </div>
                 </div>
             </div>
