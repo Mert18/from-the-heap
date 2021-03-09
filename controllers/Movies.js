@@ -11,8 +11,8 @@ export const getMovies = async (req, res) => {
 }
 
 export const createMovie = async (req, res) => {
-    const Movie = req.body;
-    const newMovie = new MovieMessage(Movie);
+    const movie = req.body;
+    const newMovie = new MovieMessage(movie);
 
     try {
         await newMovie.save();

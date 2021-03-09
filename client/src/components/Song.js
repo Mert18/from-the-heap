@@ -1,40 +1,23 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Posts from './Posts/Posts.js';
 
 import { createPost } from '../actions/Posts';
 
 const Song = () => {
 
+    const [postData, setPostData] = useState({ title: '', message: '', spotify: '', youtube: '' });
+    const post = useSelector((state) => state.posts.find());
     const dispatch = useDispatch();
 
-    const [title, setTitle] = useState("");
-    const [message, setMessage] = useState("");
-    const [spotify, setSpotify] = useState("");
-    const [youtube, setYoutube] = useState("");
+    useEffect(() => {
+        if (post) setPostData(post);
+    }, [post])
 
-    const SongTitleUpdate = (e) => {
-        setTitle(e.target.value);
-    }
-    const SongMessageUpdate = (e) => {
-        setMessage(e.target.value);
-    }
-    const SongSpotifyUpdate = (e) => {
-        setSpotify(e.target.value);
-    }
-    const SongYoutubeUpdate = (e) => {
-        setYoutube(e.target.value);
-    }
-
-    const songObject = {
-        title: title,
-        message: message,
-        spotify: spotify,
-        youtube: youtube
-    }
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(createPost(songObject));
+
+        dispatch(createPost(postData));
     }
 
     return (
@@ -52,16 +35,16 @@ const Song = () => {
                 <div className="song__right__throw">
                     <form onSubmit={handleSubmit} autoComplete="off">
                         <label htmlFor="song__title">Title</label>
-                        <input type="text" id="song__title" required onChange={SongTitleUpdate} />
+                        <input value={postData.title} type="text" id="song__title" name="title" required />
 
                         <label htmlFor="song__message">Your Message</label>
-                        <input type="text" id="song__message" required onChange={SongMessageUpdate} />
+                        <input value={postData.message} type="text" id="song__message" name="message" required />
 
                         <label htmlFor="song__spotify">Spotify Link</label>
-                        <input type="text" id="song__spotify" required onChange={SongSpotifyUpdate} />
+                        <input value={postData.spotify} type="text" id="song__spotify" name="spotify" required />
 
                         <label htmlFor="song__youtube">Youtube Link</label>
-                        <input type="text" id="song__youtube" required onChange={SongYoutubeUpdate} />
+                        <input value={postData.youtube} type="text" id="song__youtube" name="youtube" required />
 
                         <button></button>
                     </form>
