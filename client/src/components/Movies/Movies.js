@@ -6,7 +6,6 @@ import Movie from './Movie/Movie.js';
 const Movies = () => {
 
     const movies = useSelector((state) => state.movies);
-    console.log(movies)
     return (
         <div className="movies">
             {movies.map((movie) => (

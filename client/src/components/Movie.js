@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-
+import { useDispatch } from 'react-redux';
 import Movies from './Movies/Movies.js';
 
+import { createMovie } from '../actions/Movies';
+
 const Movie = () => {
+
+    const dispatch = useDispatch();
 
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
@@ -14,25 +18,14 @@ const Movie = () => {
         setMessage(e.target.value);
     }
 
+    const MovieObject = {
+        title: title,
+        message: message
+    };
+
     const handleSubmit = () => {
 
-        const postURL = "https://from-the-heap.herokuapp.com/movies";
-
-        fetch(postURL, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                title: title,
-                message: message,
-            })
-        })
-            .then(() => {
-                alert('Successfully added.')
-            })
-
+        dispatch(createMovie(MovieObject));
     }
     return (
         <div className="movie">

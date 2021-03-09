@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Posts from './Posts/Posts.js';
 
+import { createPost } from '../actions/Posts';
+
 const Song = () => {
+
+    const dispatch = useDispatch();
 
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
@@ -21,28 +26,15 @@ const Song = () => {
         setYoutube(e.target.value);
     }
 
-
+    const songObject = {
+        title: title,
+        message: message,
+        spotify: spotify,
+        youtube: youtube
+    }
     const handleSubmit = () => {
 
-        const postURL = "https://from-the-heap.herokuapp.com/posts";
-
-        fetch(postURL, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                title: title,
-                message: message,
-                spotify: spotify,
-                youtube: youtube
-            })
-        })
-            .then(() => {
-                alert('Successfully added.')
-            })
-
+        dispatch(createPost(songObject));
     }
 
     return (

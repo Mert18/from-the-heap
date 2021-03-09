@@ -19,7 +19,7 @@ const Home = () => {
                 <h1 style={{ color: color }}>HEAP</h1>
             </div>
             <div className="home__text">
-                <p>a place where you can share the songs and movies you like.</p>
+                <p>The place where you share the songs and movies you like.</p>
             </div>
         </div>
     )

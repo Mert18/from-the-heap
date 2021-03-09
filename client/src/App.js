@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import './styles/main.scss';
 import {
@@ -7,8 +8,8 @@ import {
 } from "react-router-dom";
 
 import { useDispatch } from 'react-redux';
-import { getPosts } from './actions/Posts.js';
-import { getMovies } from './actions/Movies.js';
+import { getPosts, createPost } from './actions/Posts.js';
+import { getMovies, createMovie } from './actions/Movies.js';
 
 import Header from './components/Header.js';
 import Home from './components/Home.js';
@@ -17,12 +18,7 @@ import Song from './components/Song.js';
 import Login from './components/Login.js';
 
 const App = () => {
-    const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getPosts());
-        dispatch(getMovies());
-    }, [dispatch]);
 
     const [token, setToken] = useState(true);
     return (
