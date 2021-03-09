@@ -14,7 +14,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use('/', postRoutes)
-app.use('/movies', movieRoutes)
+app.use('/', movieRoutes)
 
 const CONNECTION_URL = process.env.MONGO_URI;
 
