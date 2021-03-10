@@ -5,7 +5,7 @@ import Post from './Post/Post.js';
 
 const Posts = () => {
 
-    const posts = useSelector((state) => state.posts);
+    const posts = useSelector(state => state.posts)
 
     return (
         <div className="posts">

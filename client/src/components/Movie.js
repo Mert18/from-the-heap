@@ -8,24 +8,12 @@ const Movie = () => {
 
     const dispatch = useDispatch();
 
-    const [title, setTitle] = useState("");
-    const [message, setMessage] = useState("");
-
-    const MovieTitleUpdate = (e) => {
-        setTitle(e.target.value);
-    }
-    const MovieMessageUpdate = (e) => {
-        setMessage(e.target.value);
-    }
-
-    const MovieObject = {
-        title: title,
-        message: message
-    };
+    const [movieData, setMovieData] = useState({ title: "", message: "" });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(createMovie(MovieObject));
+        dispatch(createMovie(movieData));
+
     }
     return (
         <div className="movie">
@@ -34,10 +22,10 @@ const Movie = () => {
                 <div className="movie__left__throw">
                     <form autoComplete="off" onSubmit={handleSubmit}>
                         <label htmlFor="movie__title">Title</label>
-                        <input type="text" id="movie__title" required onChange={MovieTitleUpdate} />
+                        <input type="text" id="movie__title" required onChange={(e) => setMovieData({ ...movieData, title: e.target.value })} />
 
                         <label htmlFor="movie__message">Your Message</label>
-                        <input type="text" id="movie__message" onChange={MovieMessageUpdate} />
+                        <input type="text" id="movie__message" onChange={(e) => setMovieData({ ...movieData, message: e.target.value })} />
                         <button type="submit"></button>
                     </form>
                 </div>
