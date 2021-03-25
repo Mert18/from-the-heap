@@ -12,6 +12,11 @@ const Post = ({ post }) => {
             <div className="post__artist">
                 <h3>{post.message}</h3>
             </div>
+
+            <div>
+                <button>Spotify</button>
+                <button>Youtube</button>
+            </div>
         </div>
     )
 }
