@@ -1,6 +1,7 @@
 {
   "name": "from-the-heap",
   "version": "0.1.0",
+  "proxy": "https://from-the-heap.herokuapp.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
