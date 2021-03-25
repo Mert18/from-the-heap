@@ -22,9 +22,6 @@ const Song = () => {
             </div>
 
             <div className="song__right">
-                <div className="song__right__statistics">
-                    <h1>YOU HAVE THROWN 34 SONGS TO THE HEAP!</h1>
-                </div>
                 <div className="song__right__throw">
                     <form autoComplete="off">
                         <label htmlFor="song__title">Title</label>

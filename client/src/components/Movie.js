@@ -29,10 +29,6 @@ const Movie = () => {
                         <button type="submit"></button>
                     </form>
                 </div>
-
-                <div className="movie__left__statistics">
-                    <h2>you have successfully thrown 14 movies to the heap!</h2>
-                </div>
             </div>
 
             <div className="movie__right">
