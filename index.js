@@ -16,11 +16,10 @@ app.use(cors());
 app.use('/posts', postRoutes)
 app.use('/movies', movieRoutes)
 
-const CONNECTION_URL = process.env.MONGO_URI;
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(CONNECTION_URL, {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
