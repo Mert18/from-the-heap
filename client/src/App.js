@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 
 import { useDispatch } from 'react-redux';
-import { getPosts, createPost } from './actions/Posts.js';
-import { getMovies, createMovie } from './actions/Movies.js';
+import { getPosts } from './actions/Posts.js';
+import { getMovies } from './actions/Movies.js';
 
 
 import Header from './components/Header.js';
@@ -24,9 +24,7 @@ const App = () => {
 
     useEffect(() => {
         dispatch(getPosts());
-        dispatch(createPost());
         dispatch(getMovies());
-        dispatch(createMovie());
     }, [dispatch]);
 
     const [token, setToken] = useState(true);

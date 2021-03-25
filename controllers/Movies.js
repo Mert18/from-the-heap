@@ -2,7 +2,7 @@ import MovieMessage from '../models/MovieMessage.js';
 
 export const getMovies = async (req, res) => {
     try {
-        const MovieMessages = await MovieMessage.find();
+        const MovieMessages = await MovieMessage.find({});
         console.log(MovieMessage);
         res.status(200).json(MovieMessages);
     } catch (err) {
