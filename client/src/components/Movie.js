@@ -13,7 +13,7 @@ const Movie = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(createMovie(movieData));
-
+        setMovieData({ title: "", message: "" })
     }
     return (
         <div className="movie">

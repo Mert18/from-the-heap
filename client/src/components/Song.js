@@ -12,6 +12,7 @@ const Song = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(createPost(postData));
+        setPostData({ title: "", message: "", spotify: "", youtube: "" })
     }
     return (
         <div className="song">
