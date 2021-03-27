@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 const PostSchema = mongoose.Schema({
     title: String,
     message: String,
+    spotify: String,
+    youtube: String,
     tags: [String],
     createdAt: {
         type: Date,

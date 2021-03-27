@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
 
@@ -14,8 +14,8 @@ const Post = ({ post }) => {
             </div>
 
             <div>
-                <button>Spotify</button>
-                <button>Youtube</button>
+                <Link to={post.spotify} target="_blank" rel="noreferrer">Spotify</Link>
+                <Link to={post.youtube} target="_blank" rel="noreferrer">Youtube</Link>
             </div>
         </div>
     )
