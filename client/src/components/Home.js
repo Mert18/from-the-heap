@@ -14,8 +14,8 @@ const Home = () => {
     return (
         <div className="home">
             <div className="home__title">
-                <h1 style={{ color: "white" }}>FROM</h1>
-                <h1 style={{ color: "white" }}>THE</h1>
+                <h1 style={{ color: "#D90368" }}>FROM</h1>
+                <h1 style={{ color: color }}>THE</h1>
                 <h1 style={{ color: color }}>HEAP</h1>
             </div>
             <div className="home__text">

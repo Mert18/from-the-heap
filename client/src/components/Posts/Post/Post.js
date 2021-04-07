@@ -15,8 +15,8 @@ const Post = ({ post }) => {
             </div>
 
             <div className="post__links">
-                <a href={post.spotify} target="_blank" rel="noreferrer"><img src={spotify} alt="spotify icon" width="100px" /></a>
-                <a href={post.youtube} target="_blank" rel="noreferrer"><img src={youtube} alt="youtube icon" width="100px" /></a>
+                <a href={post.spotify} target="_blank" rel="noreferrer"><img src={spotify} alt="spotify icon" width="70px" /></a>
+                <a href={post.youtube} target="_blank" rel="noreferrer"><img src={youtube} alt="youtube icon" width="70px" /></a>
             </div>
         </div>
     )

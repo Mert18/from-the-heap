@@ -6,14 +6,15 @@
     justify-content: center;
     align-items: center;
     font-size: 3em;
-    color: white;
     margin-top: 2.5em;
     padding: 0 4em;
     &__title {
         flex: 2;
+        color: $color-3;
     }
     &__text {
         flex: 4;
+        color: $color-5;
     }
 
     h1 {
@@ -21,19 +22,6 @@
         padding: 1rem;
         &:hover {
             cursor: pointer;
-            color: black;
-        }
-    }
-}
-
-.rectsvg {
-    transition: all 1s;
-
-    rect {
-        transition: all 1s;
-
-        &:hover {
-            fill: white;
         }
     }
 }
