@@ -4,9 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import postRoutes from './routes/PostRoutes.js';
-import movieRoutes from './routes/MovieRoutes.js';
-import userRoutes from './routes/UserRoutes.js';
+import userRoutes from './routes/user';
 
 const app = express();
 
@@ -14,9 +12,8 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
-app.use('/api/users', userRoutes);
-app.use('/api/posts', postRoutes)
-app.use('/api/movies', movieRoutes)
+//middleware
+app.use('/api', userRoutes);
 
 
 const PORT = process.env.PORT || 5000;
