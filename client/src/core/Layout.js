@@ -5,35 +5,44 @@ import {isAuth, signout} from '../auth/helpers';
 const Layout = ({children, history}) => {
     return(
         <Fragment>
-            <div>
-                <ul className="nav">
-                    <li className="nav__item">
-                        <Link to="/">
-                            Home
-                        </Link>
-                    </li>
-                    {!isAuth() && (
-                        <Fragment>
-                            <li className="nav__item">
-                                <Link to="/join">
-                                    Join
-                                </Link>
-                            </li>
-                        </Fragment>
-                    )}
+            <div className="navbar">
+                <div className="navbar__left">
+                    <ul>
+                        <li>
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </li>
+                        
+                    </ul>
+                </div>
 
-                    {isAuth() && (
-                        <Fragment>
-                            <li className="nav__item">
-                                <span onClick={() => {
-                                    signout(() => history.push("/"))
-                                }}>
-                                    Sign Out
-                                </span>
-                            </li>
-                        </Fragment>
-                    )}
-                </ul>
+                <div className="navbar__right">
+                    <ul>
+                    {!isAuth() && (
+                            <Fragment>
+                                <li>
+                                    <Link to="/join">
+                                        Join
+                                    </Link>
+                                </li>
+                            </Fragment>
+                        )}
+
+                        {isAuth() && (
+                            <Fragment>
+                                <li>
+                                    <span onClick={() => {
+                                        signout(() => history.push("/"))
+                                    }}>
+                                        Sign Out
+                                    </span>
+                                </li>
+                            </Fragment>
+                        )}
+                    </ul>
+                </div>
+                
             </div>
 
             <div className="container">

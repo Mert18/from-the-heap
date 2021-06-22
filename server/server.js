@@ -28,7 +28,8 @@ app.use('/api', authRoutes);
 
 mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true,
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useCreateIndex: true
 })
 .then(() => console.log('DB Connected.'))
 .catch(err => console.log('ERR CONN ERROR', err.message))
