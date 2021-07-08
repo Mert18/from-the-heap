@@ -3,17 +3,10 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-// ==> Conexão com a Base de Dados:
-const pool = new Pool({
-    user: 'postgres',
-    password: 'hach',
-    host: 'localhost',
-    port: 5432,
-    database: 'fromtheheap'
-});
+const pool = new Pool({connectionString: process.env.DATABASE_URL});
 
 pool.on('connect', () => {
-  console.log('Base de Dados conectado com sucesso!');
+  console.log('Database successfully connected.');
 });
 
 module.exports = {
