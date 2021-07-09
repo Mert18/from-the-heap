@@ -1,6 +1,6 @@
 const {pool} = require('../config/database');
 const asyncHandler = require('express-async-handler');
-
+const passport = require('passport')
 const bcrypt = require("bcrypt");
 
 const createUser = asyncHandler(async (req, res) => {
@@ -54,8 +54,28 @@ const createUser = asyncHandler(async (req, res) => {
       }
     );
   }
-})
+});
+const authUser = () => {
+  try {
+    passport.authenticate('local', {
+      successRedirect: '/',
+      failureRedirect: '/',
+      failureFlash: true
+      }), function(req, res) {
+      if (req.body.remember) {
+        req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // Cookie expires after 30 days
+      } else {
+        req.session.cookie.expires = false; // Cookie expires at end of session
+      }
+      res.redirect('/');
+      }
+  } catch (error) {
+    console.log('User login failed.', error);
+  }
+  
+}
 
 module.exports = {
-  createUser
+  createUser,
+  authUser
 }
